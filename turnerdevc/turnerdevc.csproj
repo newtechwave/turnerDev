@@ -1,0 +1,1255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3CB29F5E-5AD3-420D-8EC5-86553B8EA906}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>turnerdevc</RootNamespace>
+    <AssemblyName>turnerdevc</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\css\site.css" />
+    <Content Include="app\images\ajax-loader.gif" />
+    <Content Include="app\js\features\titles\controllers\detailsController.js" />
+    <Content Include="app\js\features\titles\views\detailsView.html" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app\bower.json" />
+    <Content Include="app\bower_components\angular-bootstrap\.bower.json" />
+    <Content Include="app\bower_components\angular-bootstrap\.npmignore" />
+    <Content Include="app\bower_components\angular-bootstrap\bower.json" />
+    <Content Include="app\bower_components\angular-bootstrap\package.json" />
+    <Content Include="app\bower_components\angular-bootstrap\README.md" />
+    <Content Include="app\bower_components\angular-carousel\.bower.json" />
+    <Content Include="app\bower_components\angular-carousel\.bowerrc" />
+    <Content Include="app\bower_components\angular-carousel\.editorconfig" />
+    <Content Include="app\bower_components\angular-carousel\bower.json" />
+    <Content Include="app\bower_components\angular-carousel\dist\angular-carousel.css.map" />
+    <Content Include="app\bower_components\angular-carousel\LICENSE" />
+    <Content Include="app\bower_components\angular-carousel\package.json" />
+    <Content Include="app\bower_components\angular-carousel\README.md" />
+    <Content Include="app\bower_components\angular-carousel\src\css\angular-carousel.scss" />
+    <Content Include="app\bower_components\angular-sanitize\.bower.json" />
+    <Content Include="app\bower_components\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="app\bower_components\angular-sanitize\bower.json" />
+    <Content Include="app\bower_components\angular-sanitize\LICENSE.md" />
+    <Content Include="app\bower_components\angular-sanitize\package.json" />
+    <Content Include="app\bower_components\angular-sanitize\README.md" />
+    <Content Include="app\bower_components\angular-touch\.bower.json" />
+    <Content Include="app\bower_components\angular-touch\angular-touch.min.js.map" />
+    <Content Include="app\bower_components\angular-touch\bower.json" />
+    <Content Include="app\bower_components\angular-touch\LICENSE.md" />
+    <Content Include="app\bower_components\angular-touch\package.json" />
+    <Content Include="app\bower_components\angular-touch\README.md" />
+    <Content Include="app\bower_components\angular-ui-grid\.bower.json" />
+    <Content Include="app\bower_components\angular-ui-grid\bower.json" />
+    <Content Include="app\bower_components\angular-ui-grid\less\animation.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\body.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\bootstrap\bootstrap.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\cell.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\cellnav\less\cellNav.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\edit\less\edit.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\elements.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\expandable\less\expandable.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\exporter\less\exporter.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\footer.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\goups.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\grid.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\grouping\less\grouping.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\header.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\icons.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\importer\less\importer.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\main.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\menu.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\move-columns\less\colMovable.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\pagination\less\pagination.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\pinning\less\pinning.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\resize-columns\less\column-resizer.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\row-edit\less\rowEdit.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\rtl.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\selection\less\selection.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\sorting.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\tree-base\less\tree-base.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\tree-view\less\tree-view.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\validate\less\validate.less" />
+    <Content Include="app\bower_components\angular-ui-grid\less\variables.less" />
+    <Content Include="app\bower_components\angular-ui-grid\package.json" />
+    <Content Include="app\bower_components\angular-ui-grid\README.md" />
+    <Content Include="app\bower_components\angular-ui-grid\ui-grid.eot" />
+    <Content Include="app\bower_components\angular-ui-grid\ui-grid.ttf" />
+    <Content Include="app\bower_components\angular-ui-grid\ui-grid.woff" />
+    <Content Include="app\bower_components\angular-ui-router\.bower.json" />
+    <Content Include="app\bower_components\angular-ui-router\bower.json" />
+    <Content Include="app\bower_components\angular-ui-router\CHANGELOG.md" />
+    <Content Include="app\bower_components\angular-ui-router\CONTRIBUTING.md" />
+    <Content Include="app\bower_components\angular-ui-router\LICENSE" />
+    <Content Include="app\bower_components\angular-ui-router\README.md" />
+    <Content Include="app\bower_components\angular\.bower.json" />
+    <Content Include="app\bower_components\angular\angular.min.js.gzip" />
+    <Content Include="app\bower_components\angular\angular.min.js.map" />
+    <Content Include="app\bower_components\angular\bower.json" />
+    <Content Include="app\bower_components\angular\LICENSE.md" />
+    <Content Include="app\bower_components\angular\package.json" />
+    <Content Include="app\bower_components\angular\README.md" />
+    <Content Include="app\bower_components\bootstrap\.bower.json" />
+    <Content Include="app\bower_components\bootstrap\bower.json" />
+    <Content Include="app\bower_components\bootstrap\CHANGELOG.md" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="app\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="app\bower_components\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\bower_components\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="app\bower_components\bootstrap\grunt\.jshintrc" />
+    <Content Include="app\bower_components\bootstrap\grunt\configBridge.json" />
+    <Content Include="app\bower_components\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="app\bower_components\bootstrap\js\.jscsrc" />
+    <Content Include="app\bower_components\bootstrap\js\.jshintrc" />
+    <Content Include="app\bower_components\bootstrap\less\.csscomb.json" />
+    <Content Include="app\bower_components\bootstrap\less\.csslintrc" />
+    <Content Include="app\bower_components\bootstrap\less\alerts.less" />
+    <Content Include="app\bower_components\bootstrap\less\badges.less" />
+    <Content Include="app\bower_components\bootstrap\less\bootstrap.less" />
+    <Content Include="app\bower_components\bootstrap\less\breadcrumbs.less" />
+    <Content Include="app\bower_components\bootstrap\less\button-groups.less" />
+    <Content Include="app\bower_components\bootstrap\less\buttons.less" />
+    <Content Include="app\bower_components\bootstrap\less\carousel.less" />
+    <Content Include="app\bower_components\bootstrap\less\close.less" />
+    <Content Include="app\bower_components\bootstrap\less\code.less" />
+    <Content Include="app\bower_components\bootstrap\less\component-animations.less" />
+    <Content Include="app\bower_components\bootstrap\less\dropdowns.less" />
+    <Content Include="app\bower_components\bootstrap\less\forms.less" />
+    <Content Include="app\bower_components\bootstrap\less\glyphicons.less" />
+    <Content Include="app\bower_components\bootstrap\less\grid.less" />
+    <Content Include="app\bower_components\bootstrap\less\input-groups.less" />
+    <Content Include="app\bower_components\bootstrap\less\jumbotron.less" />
+    <Content Include="app\bower_components\bootstrap\less\labels.less" />
+    <Content Include="app\bower_components\bootstrap\less\list-group.less" />
+    <Content Include="app\bower_components\bootstrap\less\media.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\alerts.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\buttons.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\center-block.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\forms.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\gradients.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\grid.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\image.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\labels.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\list-group.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\opacity.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\pagination.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\panels.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\resize.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\size.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\table-row.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="app\bower_components\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="app\bower_components\bootstrap\less\modals.less" />
+    <Content Include="app\bower_components\bootstrap\less\navbar.less" />
+    <Content Include="app\bower_components\bootstrap\less\navs.less" />
+    <Content Include="app\bower_components\bootstrap\less\normalize.less" />
+    <Content Include="app\bower_components\bootstrap\less\pager.less" />
+    <Content Include="app\bower_components\bootstrap\less\pagination.less" />
+    <Content Include="app\bower_components\bootstrap\less\panels.less" />
+    <Content Include="app\bower_components\bootstrap\less\popovers.less" />
+    <Content Include="app\bower_components\bootstrap\less\print.less" />
+    <Content Include="app\bower_components\bootstrap\less\progress-bars.less" />
+    <Content Include="app\bower_components\bootstrap\less\responsive-embed.less" />
+    <Content Include="app\bower_components\bootstrap\less\responsive-utilities.less" />
+    <Content Include="app\bower_components\bootstrap\less\scaffolding.less" />
+    <Content Include="app\bower_components\bootstrap\less\tables.less" />
+    <Content Include="app\bower_components\bootstrap\less\theme.less" />
+    <Content Include="app\bower_components\bootstrap\less\thumbnails.less" />
+    <Content Include="app\bower_components\bootstrap\less\tooltip.less" />
+    <Content Include="app\bower_components\bootstrap\less\type.less" />
+    <Content Include="app\bower_components\bootstrap\less\utilities.less" />
+    <Content Include="app\bower_components\bootstrap\less\variables.less" />
+    <Content Include="app\bower_components\bootstrap\less\wells.less" />
+    <Content Include="app\bower_components\bootstrap\LICENSE" />
+    <Content Include="app\bower_components\bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="app\bower_components\bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="app\bower_components\bootstrap\nuget\MyGet.ps1" />
+    <Content Include="app\bower_components\bootstrap\package.json" />
+    <Content Include="app\bower_components\bootstrap\README.md" />
+    <Content Include="app\bower_components\jquery\.bower.json" />
+    <Content Include="app\bower_components\jquery\bower.json" />
+    <Content Include="app\bower_components\jquery\dist\jquery.min.map" />
+    <Content Include="app\bower_components\jquery\external\sizzle\dist\sizzle.min.map" />
+    <Content Include="app\bower_components\jquery\README.md" />
+    <Content Include="app\bower_components\jquery\src\.jshintrc" />
+    <Content Include="app\bower_components\modernizr\.bower.json" />
+    <Content Include="app\bower_components\modernizr\.coveralls.yml" />
+    <Content Include="app\bower_components\modernizr\.editorconfig" />
+    <Content Include="app\bower_components\modernizr\.jscsrc" />
+    <Content Include="app\bower_components\modernizr\.jshintignore" />
+    <Content Include="app\bower_components\modernizr\.jshintrc" />
+    <Content Include="app\bower_components\modernizr\.npmignore" />
+    <Content Include="app\bower_components\modernizr\.travis.yml" />
+    <Content Include="app\bower_components\modernizr\appveyor.yml" />
+    <Content Include="app\bower_components\modernizr\bin\modernizr" />
+    <Content Include="app\bower_components\modernizr\lib\.jshintrc" />
+    <Content Include="app\bower_components\modernizr\lib\config-all.json" />
+    <Content Include="app\bower_components\modernizr\lib\polyfills.json" />
+    <Content Include="app\bower_components\modernizr\LICENSE" />
+    <Content Include="app\bower_components\modernizr\media\Modernizr 2 Logo vertical big.ai" />
+    <Content Include="app\bower_components\modernizr\media\Modernizr 2 Logo vertical medium.ai" />
+    <Content Include="app\bower_components\modernizr\media\Modernizr 2 Logo vertical small.ai" />
+    <Content Include="app\bower_components\modernizr\media\Modernizr 2 Logo.ai" />
+    <Content Include="app\bower_components\modernizr\media\Modernizr 2 Logo.eps" />
+    <Content Include="app\bower_components\modernizr\media\Modernizr 2 Logo.pdf" />
+    <Content Include="app\bower_components\modernizr\package.json" />
+    <Content Include="app\bower_components\modernizr\readme.md" />
+    <Content Include="app\bower_components\modernizr\test\.jshintrc" />
+    <Content Include="app\bower_components\modernizr\test\browser\iframe.jade" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration.jade" />
+    <Content Include="app\bower_components\modernizr\test\browser\sauce-browsers.json" />
+    <Content Include="app\bower_components\modernizr\test\browser\unit.jade" />
+    <Content Include="app\bower_components\ngAnimate\.bower.json" />
+    <Content Include="app\bower_components\ngAnimate\.sass-cache\7fdab734b2caa40e59f92a90ad814fb25f2984ec\ng-animation.scssc" />
+    <Content Include="app\bower_components\ngAnimate\.sass-cache\7fdab734b2caa40e59f92a90ad814fb25f2984ec\style.scssc" />
+    <Content Include="app\bower_components\ngAnimate\config.rb" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\config.json" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\font\fontello.eot" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\font\fontello.ttf" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\font\fontello.woff" />
+    <Content Include="app\bower_components\ngAnimate\README.md" />
+    <Content Include="app\bower_components\ngAnimate\sass\ng-animation.scss" />
+    <Content Include="app\bower_components\ngAnimate\sass\style.scss" />
+    <Content Include="app\bower_components\ui-bootstrap\.bower.json" />
+    <Content Include="app\bower_components\ui-bootstrap\.editorconfig" />
+    <Content Include="app\bower_components\ui-bootstrap\.eslintrc" />
+    <Content Include="app\bower_components\ui-bootstrap\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="app\bower_components\ui-bootstrap\.jshintrc" />
+    <Content Include="app\bower_components\ui-bootstrap\.npmignore" />
+    <Content Include="app\bower_components\ui-bootstrap\.travis.yml" />
+    <Content Include="app\bower_components\ui-bootstrap\CHANGELOG.md" />
+    <Content Include="app\bower_components\ui-bootstrap\CODE_OF_CONDUCT.md" />
+    <Content Include="app\bower_components\ui-bootstrap\CONTRIBUTING.md" />
+    <Content Include="app\bower_components\ui-bootstrap\LICENSE" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\changelog.tpl.md" />
+    <Content Include="app\bower_components\ui-bootstrap\package.json" />
+    <Content Include="app\bower_components\ui-bootstrap\README.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\accordion\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\alert\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\buttons\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\carousel\docs\README.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\collapse\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dateparser\docs\README.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepickerPopup\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepicker\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dropdown\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\modal\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pager\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pagination\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\popover\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\position\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\progressbar\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\rating\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tabs\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\timepicker\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tooltip\docs\readme.md" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\docs\readme.md" />
+    <Content Include="app\fonts\fontawesome-webfont.eot" />
+    <Content Include="app\fonts\fontawesome-webfont.ttf" />
+    <Content Include="app\fonts\fontawesome-webfont.woff" />
+    <Content Include="app\fonts\fontawesome-webfont.woff2" />
+    <Content Include="app\fonts\FontAwesome.otf" />
+    <Content Include="app\js\features\titles\views\titleView.html" />
+    <Content Include="app\js\features\titles\services\titleFactory.js" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\bower_components\angular-bootstrap\.gitignore" />
+    <Content Include="app\bower_components\angular-bootstrap\index.js" />
+    <Content Include="app\bower_components\angular-bootstrap\ui-bootstrap-csp.css" />
+    <Content Include="app\bower_components\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="app\bower_components\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="app\bower_components\angular-bootstrap\ui-bootstrap.js" />
+    <Content Include="app\bower_components\angular-bootstrap\ui-bootstrap.min.js" />
+    <Content Include="app\bower_components\angular-carousel\.gitignore" />
+    <Content Include="app\bower_components\angular-carousel\dist\angular-carousel.css" />
+    <Content Include="app\bower_components\angular-carousel\dist\angular-carousel.js" />
+    <Content Include="app\bower_components\angular-carousel\dist\angular-carousel.min.css" />
+    <Content Include="app\bower_components\angular-carousel\dist\angular-carousel.min.js" />
+    <Content Include="app\bower_components\angular-carousel\fullscreen.html" />
+    <Content Include="app\bower_components\angular-carousel\game.html" />
+    <Content Include="app\bower_components\angular-carousel\Gruntfile.js" />
+    <Content Include="app\bower_components\angular-carousel\index.html" />
+    <Content Include="app\bower_components\angular-carousel\lib\angular-mobile.js" />
+    <Content Include="app\bower_components\angular-carousel\lib\browserTrigger.js" />
+    <Content Include="app\bower_components\angular-carousel\src\angular-carousel.js" />
+    <Content Include="app\bower_components\angular-carousel\src\directives\rn-carousel-auto-slide.js" />
+    <Content Include="app\bower_components\angular-carousel\src\directives\rn-carousel-indicators.js" />
+    <Content Include="app\bower_components\angular-carousel\src\directives\rn-carousel.js" />
+    <Content Include="app\bower_components\angular-carousel\src\directives\shifty.js" />
+    <Content Include="app\bower_components\angular-carousel\src\directives\sliceFilter.js" />
+    <Content Include="app\bower_components\angular-carousel\test\karma.conf.js" />
+    <Content Include="app\bower_components\angular-carousel\test\unit\angular-carousel.js" />
+    <Content Include="app\bower_components\angular-carousel\test\unit\angular-carousel.shifty.js" />
+    <Content Include="app\bower_components\angular-sanitize\angular-sanitize.js" />
+    <Content Include="app\bower_components\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="app\bower_components\angular-sanitize\index.js" />
+    <Content Include="app\bower_components\angular-touch\angular-touch.js" />
+    <Content Include="app\bower_components\angular-touch\angular-touch.min.js" />
+    <Content Include="app\bower_components\angular-touch\index.js" />
+    <Content Include="app\bower_components\angular-ui-grid\ui-grid.css" />
+    <Content Include="app\bower_components\angular-ui-grid\ui-grid.js" />
+    <Content Include="app\bower_components\angular-ui-grid\ui-grid.min.css" />
+    <Content Include="app\bower_components\angular-ui-grid\ui-grid.min.js" />
+    <Content Include="app\bower_components\angular-ui-grid\ui-grid.svg" />
+    <Content Include="app\bower_components\angular-ui-router\release\angular-ui-router.js" />
+    <Content Include="app\bower_components\angular-ui-router\release\angular-ui-router.min.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\common.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\resolve.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\state.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\stateDirectives.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\stateFilters.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\templateFactory.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\urlMatcherFactory.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\urlRouter.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\view.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\viewDirective.js" />
+    <Content Include="app\bower_components\angular-ui-router\src\viewScroll.js" />
+    <Content Include="app\bower_components\angular\angular-csp.css" />
+    <Content Include="app\bower_components\angular\angular.js" />
+    <Content Include="app\bower_components\angular\angular.min.js" />
+    <Content Include="app\bower_components\angular\index.js" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="app\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="app\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="app\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="app\bower_components\bootstrap\dist\js\npm.js" />
+    <Content Include="app\bower_components\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\bower_components\bootstrap\Gruntfile.js" />
+    <Content Include="app\bower_components\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="app\bower_components\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="app\bower_components\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="app\bower_components\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="app\bower_components\bootstrap\js\affix.js" />
+    <Content Include="app\bower_components\bootstrap\js\alert.js" />
+    <Content Include="app\bower_components\bootstrap\js\button.js" />
+    <Content Include="app\bower_components\bootstrap\js\carousel.js" />
+    <Content Include="app\bower_components\bootstrap\js\collapse.js" />
+    <Content Include="app\bower_components\bootstrap\js\dropdown.js" />
+    <Content Include="app\bower_components\bootstrap\js\modal.js" />
+    <Content Include="app\bower_components\bootstrap\js\popover.js" />
+    <Content Include="app\bower_components\bootstrap\js\scrollspy.js" />
+    <Content Include="app\bower_components\bootstrap\js\tab.js" />
+    <Content Include="app\bower_components\bootstrap\js\tooltip.js" />
+    <Content Include="app\bower_components\bootstrap\js\transition.js" />
+    <Content Include="app\bower_components\bootstrap\package.js" />
+    <Content Include="app\bower_components\jquery\AUTHORS.txt" />
+    <Content Include="app\bower_components\jquery\dist\jquery.js" />
+    <Content Include="app\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="app\bower_components\jquery\external\sizzle\dist\sizzle.js" />
+    <Content Include="app\bower_components\jquery\external\sizzle\dist\sizzle.min.js" />
+    <Content Include="app\bower_components\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="app\bower_components\jquery\LICENSE.txt" />
+    <Content Include="app\bower_components\jquery\src\ajax.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\jsonp.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\load.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\parseJSON.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\parseXML.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\script.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\var\location.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\var\nonce.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\var\rquery.js" />
+    <Content Include="app\bower_components\jquery\src\ajax\xhr.js" />
+    <Content Include="app\bower_components\jquery\src\attributes.js" />
+    <Content Include="app\bower_components\jquery\src\attributes\attr.js" />
+    <Content Include="app\bower_components\jquery\src\attributes\classes.js" />
+    <Content Include="app\bower_components\jquery\src\attributes\prop.js" />
+    <Content Include="app\bower_components\jquery\src\attributes\support.js" />
+    <Content Include="app\bower_components\jquery\src\attributes\val.js" />
+    <Content Include="app\bower_components\jquery\src\callbacks.js" />
+    <Content Include="app\bower_components\jquery\src\core.js" />
+    <Content Include="app\bower_components\jquery\src\core\access.js" />
+    <Content Include="app\bower_components\jquery\src\core\init.js" />
+    <Content Include="app\bower_components\jquery\src\core\parseHTML.js" />
+    <Content Include="app\bower_components\jquery\src\core\ready.js" />
+    <Content Include="app\bower_components\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="app\bower_components\jquery\src\css.js" />
+    <Content Include="app\bower_components\jquery\src\css\addGetHookIf.js" />
+    <Content Include="app\bower_components\jquery\src\css\adjustCSS.js" />
+    <Content Include="app\bower_components\jquery\src\css\curCSS.js" />
+    <Content Include="app\bower_components\jquery\src\css\defaultDisplay.js" />
+    <Content Include="app\bower_components\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="app\bower_components\jquery\src\css\showHide.js" />
+    <Content Include="app\bower_components\jquery\src\css\support.js" />
+    <Content Include="app\bower_components\jquery\src\css\var\cssExpand.js" />
+    <Content Include="app\bower_components\jquery\src\css\var\getStyles.js" />
+    <Content Include="app\bower_components\jquery\src\css\var\isHidden.js" />
+    <Content Include="app\bower_components\jquery\src\css\var\rmargin.js" />
+    <Content Include="app\bower_components\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="app\bower_components\jquery\src\css\var\swap.js" />
+    <Content Include="app\bower_components\jquery\src\data.js" />
+    <Content Include="app\bower_components\jquery\src\data\Data.js" />
+    <Content Include="app\bower_components\jquery\src\data\var\acceptData.js" />
+    <Content Include="app\bower_components\jquery\src\data\var\dataPriv.js" />
+    <Content Include="app\bower_components\jquery\src\data\var\dataUser.js" />
+    <Content Include="app\bower_components\jquery\src\deferred.js" />
+    <Content Include="app\bower_components\jquery\src\deprecated.js" />
+    <Content Include="app\bower_components\jquery\src\dimensions.js" />
+    <Content Include="app\bower_components\jquery\src\effects.js" />
+    <Content Include="app\bower_components\jquery\src\effects\animatedSelector.js" />
+    <Content Include="app\bower_components\jquery\src\effects\Tween.js" />
+    <Content Include="app\bower_components\jquery\src\event.js" />
+    <Content Include="app\bower_components\jquery\src\event\ajax.js" />
+    <Content Include="app\bower_components\jquery\src\event\alias.js" />
+    <Content Include="app\bower_components\jquery\src\event\focusin.js" />
+    <Content Include="app\bower_components\jquery\src\event\support.js" />
+    <Content Include="app\bower_components\jquery\src\event\trigger.js" />
+    <Content Include="app\bower_components\jquery\src\exports\amd.js" />
+    <Content Include="app\bower_components\jquery\src\exports\global.js" />
+    <Content Include="app\bower_components\jquery\src\intro.js" />
+    <Content Include="app\bower_components\jquery\src\jquery.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\buildFragment.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\getAll.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\setGlobalEval.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\support.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\var\rscriptType.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\var\rtagName.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\wrapMap.js" />
+    <Content Include="app\bower_components\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="app\bower_components\jquery\src\offset.js" />
+    <Content Include="app\bower_components\jquery\src\outro.js" />
+    <Content Include="app\bower_components\jquery\src\queue.js" />
+    <Content Include="app\bower_components\jquery\src\queue\delay.js" />
+    <Content Include="app\bower_components\jquery\src\selector-native.js" />
+    <Content Include="app\bower_components\jquery\src\selector-sizzle.js" />
+    <Content Include="app\bower_components\jquery\src\selector.js" />
+    <Content Include="app\bower_components\jquery\src\serialize.js" />
+    <Content Include="app\bower_components\jquery\src\traversing.js" />
+    <Content Include="app\bower_components\jquery\src\traversing\findFilter.js" />
+    <Content Include="app\bower_components\jquery\src\traversing\var\dir.js" />
+    <Content Include="app\bower_components\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="app\bower_components\jquery\src\traversing\var\siblings.js" />
+    <Content Include="app\bower_components\jquery\src\var\arr.js" />
+    <Content Include="app\bower_components\jquery\src\var\class2type.js" />
+    <Content Include="app\bower_components\jquery\src\var\concat.js" />
+    <Content Include="app\bower_components\jquery\src\var\document.js" />
+    <Content Include="app\bower_components\jquery\src\var\documentElement.js" />
+    <Content Include="app\bower_components\jquery\src\var\hasOwn.js" />
+    <Content Include="app\bower_components\jquery\src\var\indexOf.js" />
+    <Content Include="app\bower_components\jquery\src\var\pnum.js" />
+    <Content Include="app\bower_components\jquery\src\var\push.js" />
+    <Content Include="app\bower_components\jquery\src\var\rcssNum.js" />
+    <Content Include="app\bower_components\jquery\src\var\rnotwhite.js" />
+    <Content Include="app\bower_components\jquery\src\var\slice.js" />
+    <Content Include="app\bower_components\jquery\src\var\support.js" />
+    <Content Include="app\bower_components\jquery\src\var\toString.js" />
+    <Content Include="app\bower_components\jquery\src\wrap.js" />
+    <Content Include="app\bower_components\modernizr\.gitattributes" />
+    <Content Include="app\bower_components\modernizr\.gitignore" />
+    <Content Include="app\bower_components\modernizr\feature-detects\ambientlight.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\applicationcache.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\audio.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\audio\loop.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\audio\preload.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\audio\webaudio.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\a\download.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\battery.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\battery\lowbattery.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\blob.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\canvas.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\canvastext.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\canvas\blending.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\canvas\todataurl.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\canvas\winding.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\contenteditable.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\contextmenu.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\cookies.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\cors.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\crypto.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\crypto\getrandomvalues.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\all.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\animations.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\appearance.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\backdropfilter.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\backgroundblendmode.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\backgroundcliptext.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\backgroundposition-shorthand.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\backgroundposition-xy.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\backgroundrepeat.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\backgroundsize.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\backgroundsizecover.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\borderimage.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\borderradius.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\boxshadow.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\boxsizing.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\calc.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\checked.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\chunit.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\columns.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\cubicbezierrange.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\displayrunin.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\displaytable.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\ellipsis.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\escape.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\exunit.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\filters.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\flexbox.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\flexboxlegacy.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\flexboxtweener.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\flexwrap.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\fontface.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\generatedcontent.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\gradients.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\hairline.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\hsla.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\hyphens.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\invalid.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\lastchild.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\mask.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\mediaqueries.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\multiplebgs.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\nthchild.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\objectfit.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\opacity.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\overflow-scrolling.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\pointerevents.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\positionsticky.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\pseudoanimations.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\pseudotransitions.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\reflections.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\regions.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\remunit.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\resize.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\rgba.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\scrollbars.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\scrollsnappoints.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\shapes.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\siblinggeneral.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\subpixelfont.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\supports.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\target.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\textalignlast.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\textshadow.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\transforms.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\transforms3d.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\transformstylepreserve3d.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\transitions.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\userselect.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\valid.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\vhunit.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\vmaxunit.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\vminunit.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\vwunit.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\will-change.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\css\wrapflow.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\custom-protocol-handler.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\customevent.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\dart.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\dataview-api.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\dom\classlist.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\dom\createElement-attrs.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\dom\dataset.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\dom\documentfragment.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\dom\hidden.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\dom\microdata.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\dom\mutationObserver.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\elem\bdi.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\elem\datalist.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\elem\details.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\elem\output.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\elem\picture.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\elem\progress-meter.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\elem\ruby.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\elem\template.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\elem\time.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\elem\track.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\elem\unknown.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\emoji.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es5\array.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es5\date.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es5\function.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es5\object.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es5\specification.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es5\strictmode.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es5\string.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es5\syntax.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es5\undefined.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es6\array.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es6\collections.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es6\contains.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es6\generators.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es6\math.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es6\number.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es6\object.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es6\promises.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\es6\string.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\eventlistener.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\event\deviceorientation-motion.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\event\oninput.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\exif-orientation.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\file\api.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\file\filesystem.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\flash.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\forcetouch.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\forms\capture.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\forms\fileinput.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\forms\fileinputdirectory.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\forms\formattribute.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\forms\inputnumber-l10n.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\forms\placeholder.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\forms\requestautocomplete.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\forms\validation.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\fullscreen-api.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\gamepad.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\geolocation.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\hashchange.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\hiddenscroll.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\history.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\htmlimports.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\ie8compat.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\iframe\sandbox.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\iframe\seamless.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\iframe\srcdoc.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\img\apng.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\img\crossorigin.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\img\jpeg2000.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\img\jpegxr.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\img\sizes.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\img\srcset.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\img\webp-alpha.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\img\webp-animation.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\img\webp-lossless.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\img\webp.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\indexeddb.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\indexeddbblob.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\input.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\inputsearchevent.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\inputtypes.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\input\formaction.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\input\formenctype.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\input\formmethod.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\input\formtarget.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\intl.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\json.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\ligatures.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\lists-reversed.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\mathml.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\network\beacon.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\network\connection.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\network\eventsource.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\network\fetch.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\network\xhr-responsetype-arraybuffer.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\network\xhr-responsetype-blob.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\network\xhr-responsetype-document.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\network\xhr-responsetype-json.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\network\xhr-responsetype-text.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\network\xhr-responsetype.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\network\xhr2.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\notification.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\pagevisibility-api.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\performance.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\pointerevents.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\pointerlock-api.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\postmessage.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\proximity.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\queryselector.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\quota-management-api.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\requestanimationframe.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\script\async.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\script\defer.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\serviceworker.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\speech\speech-recognition.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\speech\speech-synthesis.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\storage\localstorage.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\storage\sessionstorage.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\storage\websqldatabase.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\style\scoped.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\svg.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\svg\asimg.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\svg\clippaths.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\svg\filters.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\svg\foreignobject.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\svg\inline.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\svg\smil.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\templatestrings.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\textarea\maxlength.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\touchevents.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\typed-arrays.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\unicode-range.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\unicode.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\url\bloburls.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\url\data-uri.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\url\parser.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\userdata.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\vibration.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\video.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\video\autoplay.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\video\loop.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\video\preload.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\vml.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\web-intents.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\webanimations.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\webgl.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\webgl\extensions.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\webrtc\datachannel.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\webrtc\getusermedia.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\webrtc\peerconnection.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\websockets.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\websockets\binary.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\window\atob-btoa.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\window\framed.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\window\matchmedia.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\workers\blobworkers.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\workers\dataworkers.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\workers\sharedworkers.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\workers\transferables.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\workers\webworkers.js" />
+    <Content Include="app\bower_components\modernizr\feature-detects\xdomainrequest.js" />
+    <Content Include="app\bower_components\modernizr\Gruntfile.js" />
+    <Content Include="app\bower_components\modernizr\lib\build-query.js" />
+    <Content Include="app\bower_components\modernizr\lib\build.js" />
+    <Content Include="app\bower_components\modernizr\lib\cli.js" />
+    <Content Include="app\bower_components\modernizr\lib\generate-banner.js" />
+    <Content Include="app\bower_components\modernizr\lib\metadata.js" />
+    <Content Include="app\bower_components\modernizr\lib\options.js" />
+    <Content Include="app\bower_components\modernizr\media\.gitattributes" />
+    <Content Include="app\bower_components\modernizr\media\Modernizr 2 Logo.png" />
+    <Content Include="app\bower_components\modernizr\media\Modernizr 2 Logo.svg" />
+    <Content Include="app\bower_components\modernizr\media\Modernizr-2-Logo-vertical-big.png" />
+    <Content Include="app\bower_components\modernizr\media\Modernizr-2-Logo-vertical-medium.png" />
+    <Content Include="app\bower_components\modernizr\media\Modernizr-2-Logo-vertical-small.png" />
+    <Content Include="app\bower_components\modernizr\src\addTest.js" />
+    <Content Include="app\bower_components\modernizr\src\atRule.js" />
+    <Content Include="app\bower_components\modernizr\src\classes.js" />
+    <Content Include="app\bower_components\modernizr\src\contains.js" />
+    <Content Include="app\bower_components\modernizr\src\createElement.js" />
+    <Content Include="app\bower_components\modernizr\src\cssomPrefixes.js" />
+    <Content Include="app\bower_components\modernizr\src\cssToDOM.js" />
+    <Content Include="app\bower_components\modernizr\src\docElement.js" />
+    <Content Include="app\bower_components\modernizr\src\domPrefixes.js" />
+    <Content Include="app\bower_components\modernizr\src\domToCSS.js" />
+    <Content Include="app\bower_components\modernizr\src\fnBind.js" />
+    <Content Include="app\bower_components\modernizr\src\generate.js" />
+    <Content Include="app\bower_components\modernizr\src\getBody.js" />
+    <Content Include="app\bower_components\modernizr\src\hasEvent.js" />
+    <Content Include="app\bower_components\modernizr\src\hasOwnProp.js" />
+    <Content Include="app\bower_components\modernizr\src\html5printshiv.js" />
+    <Content Include="app\bower_components\modernizr\src\html5shiv.js" />
+    <Content Include="app\bower_components\modernizr\src\injectElementWithStyles.js" />
+    <Content Include="app\bower_components\modernizr\src\inputElem.js" />
+    <Content Include="app\bower_components\modernizr\src\is.js" />
+    <Content Include="app\bower_components\modernizr\src\isSVG.js" />
+    <Content Include="app\bower_components\modernizr\src\load.js" />
+    <Content Include="app\bower_components\modernizr\src\modElem.js" />
+    <Content Include="app\bower_components\modernizr\src\Modernizr.js" />
+    <Content Include="app\bower_components\modernizr\src\ModernizrProto.js" />
+    <Content Include="app\bower_components\modernizr\src\mq.js" />
+    <Content Include="app\bower_components\modernizr\src\mStyle.js" />
+    <Content Include="app\bower_components\modernizr\src\nativeTestProps.js" />
+    <Content Include="app\bower_components\modernizr\src\omPrefixes.js" />
+    <Content Include="app\bower_components\modernizr\src\prefixed.js" />
+    <Content Include="app\bower_components\modernizr\src\prefixedCSS.js" />
+    <Content Include="app\bower_components\modernizr\src\prefixedCSSValue.js" />
+    <Content Include="app\bower_components\modernizr\src\prefixes.js" />
+    <Content Include="app\bower_components\modernizr\src\roundedEquals.js" />
+    <Content Include="app\bower_components\modernizr\src\setClasses.js" />
+    <Content Include="app\bower_components\modernizr\src\slice.js" />
+    <Content Include="app\bower_components\modernizr\src\testAllProps.js" />
+    <Content Include="app\bower_components\modernizr\src\testDOMProps.js" />
+    <Content Include="app\bower_components\modernizr\src\testProp.js" />
+    <Content Include="app\bower_components\modernizr\src\testProps.js" />
+    <Content Include="app\bower_components\modernizr\src\testPropsAll.js" />
+    <Content Include="app\bower_components\modernizr\src\testRunner.js" />
+    <Content Include="app\bower_components\modernizr\src\tests.js" />
+    <Content Include="app\bower_components\modernizr\src\testStyles.js" />
+    <Content Include="app\bower_components\modernizr\src\testXhrType.js" />
+    <Content Include="app\bower_components\modernizr\src\toStringFn.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration.css" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration\bools.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration\caniuse.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration\classes.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration\global.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration\iframe.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration\prefixed-atRule.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration\prefixed-autobind.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration\prefixed.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration\prefixedCSS.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\integration\svg.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\setup.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\addTest.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\atRule.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\classes.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\contains.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\createElement.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\cssomPrefixes.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\cssToDOM.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\docElement.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\domPrefixes.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\domToCSS.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\fnBind.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\generate.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\getBody.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\hasEvent.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\hasOwnProp.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\html5printshiv.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\html5shiv.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\injectElementWithStyles.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\inputElem.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\is.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\load.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\modElem.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\Modernizr.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\ModernizrProto.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\mq.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\mStyle.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\nativeTestProps.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\omPrefixes.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\prefixed.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\prefixedCSS.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\prefixedCSSValue.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\prefixes.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\roundedEquals.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\setClasses.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\slice.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\testAllProps.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\testDOMProps.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\testProp.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\testProps.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\testPropsAll.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\testRunner.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\tests.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\testStyles.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\testXhrType.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\src\toStringFn.js" />
+    <Content Include="app\bower_components\modernizr\test\browser\svgUnit.js" />
+    <Content Include="app\bower_components\modernizr\test\cleanup.js" />
+    <Content Include="app\bower_components\modernizr\test\img\integration.svg" />
+    <Content Include="app\bower_components\modernizr\test\img\unit.svg" />
+    <Content Include="app\bower_components\modernizr\test\js\lib\sinon.js" />
+    <Content Include="app\bower_components\modernizr\test\js\lib\uaparser.js" />
+    <Content Include="app\bower_components\modernizr\test\mocks\lib\build-query.js" />
+    <Content Include="app\bower_components\modernizr\test\mocks\lib\metadata.js" />
+    <Content Include="app\bower_components\modernizr\test\node\lib\build.js" />
+    <Content Include="app\bower_components\modernizr\test\node\lib\cli.js" />
+    <Content Include="app\bower_components\modernizr\test\node\lib\metadata.js" />
+    <Content Include="app\bower_components\modernizr\test\node\lib\options.js" />
+    <Content Include="app\bower_components\modernizr\test\universal\lib\build-query.js" />
+    <Content Include="app\bower_components\modernizr\test\universal\lib\generate-banner.js" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\css\animation.css" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\css\fontello-codes.css" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\css\fontello-embedded.css" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\css\fontello-ie7-codes.css" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\css\fontello-ie7.css" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\css\fontello.css" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\demo.html" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\font\fontello.svg" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\LICENSE.txt" />
+    <Content Include="app\bower_components\ngAnimate\css\fontello\README.txt" />
+    <Content Include="app\bower_components\ngAnimate\css\ng-animation.css" />
+    <Content Include="app\bower_components\ngAnimate\css\style.css" />
+    <Content Include="app\bower_components\ngAnimate\index.html" />
+    <Content Include="app\bower_components\ngAnimate\js\angular-animate.min.js" />
+    <Content Include="app\bower_components\ngAnimate\js\angular.min.js" />
+    <Content Include="app\bower_components\ngAnimate\js\app.js" />
+    <Content Include="app\bower_components\ngAnimate\js\jquery.js" />
+    <Content Include="app\bower_components\ui-bootstrap\.gitattributes" />
+    <Content Include="app\bower_components\ui-bootstrap\.gitignore" />
+    <Content Include="app\bower_components\ui-bootstrap\Gruntfile.js" />
+    <Content Include="app\bower_components\ui-bootstrap\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\karma.conf.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\app.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\demo.css" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\favicon.ico" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\github-16px.png" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\header.png" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\img\glyphicons-halflings.png" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\plunker.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\rainbow-generic.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\rainbow-html.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\rainbow-javascript.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\rainbow.css" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\rainbow.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\smoothscroll-angular-custom.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\assets\uglifyjs.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\demo\index.html" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\raw-files-generator.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\test-lib\helpers.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\test-lib\jquery-1.8.2.min.js" />
+    <Content Include="app\bower_components\ui-bootstrap\misc\validate-commit-msg.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\accordion\accordion.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\accordion\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\accordion\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\accordion\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\accordion\test\accordion.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\alert\alert.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\alert\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\alert\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\alert\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\alert\test\alert.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\buttons\buttons.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\buttons\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\buttons\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\buttons\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\buttons\test\buttons.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\carousel\carousel.css" />
+    <Content Include="app\bower_components\ui-bootstrap\src\carousel\carousel.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\carousel\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\carousel\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\carousel\index-nocss.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\carousel\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\carousel\test\carousel.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\collapse\collapse.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\collapse\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\collapse\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\collapse\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\collapse\test\collapse.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dateparser\dateparser.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dateparser\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dateparser\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dateparser\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dateparser\test\dateparser.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepickerPopup\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepickerPopup\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepickerPopup\index-nocss.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepickerPopup\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepickerPopup\popup.css" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepickerPopup\popup.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepickerPopup\test\popup.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepicker\datepicker.css" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepicker\datepicker.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepicker\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepicker\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepicker\index-nocss.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepicker\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\datepicker\test\datepicker.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\debounce\debounce.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\debounce\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\debounce\test\debounce.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dropdown\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dropdown\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dropdown\dropdown.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dropdown\index-nocss.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dropdown\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\dropdown\test\dropdown.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\isClass\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\isClass\isClass.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\isClass\test\isClass.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\modal\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\modal\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\modal\index-nocss.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\modal\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\modal\modal.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\modal\test\modal.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\modal\test\multiMap.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pager\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pager\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pager\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pager\pager.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pager\test\pager.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pagination\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pagination\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pagination\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pagination\pagination.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\pagination\test\pagination.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\paging\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\paging\paging.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\paging\test\paging.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\popover\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\popover\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\popover\index-nocss.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\popover\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\popover\popover.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\popover\test\popover-html.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\popover\test\popover-template.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\popover\test\popover.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\position\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\position\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\position\index-nocss.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\position\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\position\position.css" />
+    <Content Include="app\bower_components\ui-bootstrap\src\position\position.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\position\test\position.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\position\test\test.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\progressbar\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\progressbar\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\progressbar\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\progressbar\progressbar.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\progressbar\test\progressbar.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\rating\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\rating\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\rating\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\rating\rating.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\rating\test\rating.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\stackedMap\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\stackedMap\stackedMap.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\stackedMap\test\stackedMap.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tabs\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tabs\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tabs\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tabs\tabs.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tabs\test\tabs.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\timepicker\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\timepicker\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\timepicker\index-nocss.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\timepicker\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\timepicker\test\timepicker.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\timepicker\timepicker.css" />
+    <Content Include="app\bower_components\ui-bootstrap\src\timepicker\timepicker.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tooltip\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tooltip\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tooltip\index-nocss.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tooltip\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tooltip\test\tooltip-template.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tooltip\test\tooltip.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tooltip\test\tooltip2.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tooltip\tooltip.css" />
+    <Content Include="app\bower_components\ui-bootstrap\src\tooltip\tooltip.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\docs\demo.html" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\docs\demo.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\index-nocss.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\index.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\test\typeahead-highlight-ngsanitize.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\test\typeahead-highlight.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\test\typeahead-parser.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\test\typeahead-popup.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\test\typeahead.spec.js" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\typeahead.css" />
+    <Content Include="app\bower_components\ui-bootstrap\src\typeahead\typeahead.js" />
+    <Content Include="app\bower_components\ui-bootstrap\template\accordion\accordion-group.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\accordion\accordion.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\alert\alert.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\carousel\carousel.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\carousel\slide.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\datepickerPopup\popup.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\datepicker\datepicker.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\datepicker\day.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\datepicker\month.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\datepicker\year.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\modal\backdrop.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\modal\window.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\pager\pager.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\pagination\pagination.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\popover\popover-html.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\popover\popover-template.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\popover\popover.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\progressbar\bar.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\progressbar\progress.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\progressbar\progressbar.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\rating\rating.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\tabs\tab.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\tabs\tabset.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\timepicker\timepicker.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\tooltip\tooltip-html-popup.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\tooltip\tooltip-popup.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\tooltip\tooltip-template-popup.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\typeahead\typeahead-match.html" />
+    <Content Include="app\bower_components\ui-bootstrap\template\typeahead\typeahead-popup.html" />
+    <Content Include="app\fonts\fontawesome-webfont.svg" />
+    <Content Include="app\js\application.js" />
+    <Content Include="app\js\features\titles\controllers\searchController.js" />
+    <Content Include="app\js\features\titles\titleRoutes.js" />
+    <Content Include="app\js\features\titles\titleModule.js" />
+    <Content Include="app\js\features\titles\views\searchView.html" />
+    <Content Include="Global.asax" />
+    <Content Include="app\js\scripts\ai.0.22.9-build00167.js" />
+    <Content Include="app\js\scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="index.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\js\common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\turnerdevc.objects\turnerdevc.objects.csproj">
+      <Project>{0e4ec6b5-de29-4327-a0ee-0087ec1e6e74}</Project>
+      <Name>turnerdevc.objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\turnerdevc.webApi\turnerdevc.webApi.csproj">
+      <Project>{1c8b9757-1930-46ff-a6ee-f33929cae8fb}</Project>
+      <Name>turnerdevc.webApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61501</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61501/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+﻿body {
+}
+.selection-button {
+    width: 100%;
+    background: lightblue;
+}
+.selection-button:hover {
+    background: wheat;
+}
+
+.bottom-height {
+    overflow: auto;
+    height: 25em;
+}

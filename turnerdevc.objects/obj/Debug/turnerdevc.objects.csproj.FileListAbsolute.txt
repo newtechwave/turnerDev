@@ -1,0 +1,5 @@
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.objects\bin\Debug\turnerdevc.objects.dll
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.objects\bin\Debug\turnerdevc.objects.pdb
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.objects\obj\Debug\turnerdevc.objects.csprojResolveAssemblyReference.cache
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.objects\obj\Debug\turnerdevc.objects.dll
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.objects\obj\Debug\turnerdevc.objects.pdb

@@ -1,0 +1,36 @@
+﻿<div ng-controller="searchController as vm" ng-init="vm.init()">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-6">
+                <input class="form-control" ng-model="vm.searchText" placeholder="Search for titles" />
+
+            </div>
+            <div class="col-lg-2"></div>    
+        </div>
+        <div class="row" ng-show="vm.searchResults !==''">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5">
+                <div ng-show="vm.loading">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-3">
+                        <img  src="/app/images/ajax-loader.gif" />
+                    </div>
+                    <div class="col-lg-2"></div> 
+                </div>
+               
+                <div ng-show="!vm.loading" ng-repeat="titleInfo in vm.searchResults">
+                    <button class="selection-button" ng-click="vm.titleDetails(titleInfo.titleId, titleInfo.titleName)">
+                        <b>{{titleInfo.titleName}} </b>
+                        ( {{titleInfo.releaseYear}})
+                    </button>
+                </div>
+
+
+            </div>
+             <div class="col-lg-2"></div>
+        </div>
+
+    </div>
+
+</div>

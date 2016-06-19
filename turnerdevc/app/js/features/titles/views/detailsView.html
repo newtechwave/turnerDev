@@ -1,0 +1,59 @@
+﻿<div ng-controller="detailsController as vm" ng-init="vm.init()">
+    <div class="container">
+
+        <div class="row">
+            <h1>{{vm.currentTitle.title}}</h1>
+            <div class="panel panel-primary col-lg-12">
+                <div class="panel-heading panel-header-redueced">
+                    Story
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="info in vm.story">
+                        <b>{{info.type}}</b> <i>{{info.language}}</i><br/>
+                        <p>{{info.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-primary col-lg-6 bottom-height">
+                <div class="panel-heading panel-header-redueced">
+                    Participants
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="info in vm.participants">
+                        <b>{{info.name}} </b> - {{info.roleType}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-primary col-lg-2 bottom-height">
+                <div class="panel-heading panel-header-redueced">
+                    Genres
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="info in vm.genres">
+                        {{info.name}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-primary col-lg-4 bottom-height">
+                <div class="panel-heading panel-header-redueced">
+                    Awards
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="info in vm.awards">
+                        {{info.awardName}} <span ng-show="info.awardYear !== undefined">({{info.awardYear}}) </span> 
+                        <i>{{info.awardCompany}}</i>
+                    </div>
+                </div>
+            </div>
+         
+
+
+        </div>
+    </div>
+
+
+</div>

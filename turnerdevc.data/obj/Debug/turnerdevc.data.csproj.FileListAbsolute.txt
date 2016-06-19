@@ -1,0 +1,12 @@
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\bin\Debug\turnerdevc.data.dll.config
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\bin\Debug\turnerdevc.data.dll
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\bin\Debug\turnerdevc.data.pdb
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\bin\Debug\EntityFramework.dll
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\bin\Debug\EntityFramework.SqlServer.dll
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\bin\Debug\turnerdevc.objects.dll
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\bin\Debug\turnerdevc.objects.pdb
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\bin\Debug\EntityFramework.xml
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\bin\Debug\EntityFramework.SqlServer.xml
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\obj\Debug\turnerdevc.data.dll
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\obj\Debug\turnerdevc.data.pdb
+C:\!Projects\VisualStudio\WebApi\turnerdevc\turnerdevc.data\obj\Debug\turnerdevc.data.csprojResolveAssemblyReference.cache
